@@ -2,13 +2,18 @@
 
 <head>
     <title>Barron</title>
-    <link href="css/style.css" rel="stylesheet">
-    <link href="assets/css/font-awesome.min.css" rel="stylesheet" media="screen">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" <link href="assets/css/font-awesome.min.css" rel="stylesheet" media="screen">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta charset="utf-8">
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" media="screen">
+
+
+
 </head>
 
 
@@ -51,7 +56,7 @@
     </nav>
 
     <header id="home">
-        <div class="title1">Barrons</div>
+        <div class="title1 animated fadeInLeft">Barrons</div>
 
     </header>
     <section id="Contact">
@@ -84,6 +89,12 @@
             adipisicing elit. Doloremque veritatis natus suscipit nesciunt voluptatem quod culpa architecto veniam.
         </article>
 
+        <!-- icons for socia websites -->
+        <div class="icon1 wow slideinRight">
+            <a href="https://www.facebook.com/sergio.barron.16?fref=ts"><i class="fa fa-facebook-square fa-4x" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/sergthebarber1/?hl=en"><i class="fa fa-instagram fa-4x" aria-hidden="true"></i></a>
+        </div>
+
         <!-- Seperation of the two profiles ^Sergio vAdrina -->
         <div class="box4">
             <div class="image1">
@@ -97,6 +108,12 @@
             in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing
             elit. Doloremque veritatis natus suscipit nesciunt voluptatem quod culpa architecto veniam.
         </article>
+
+        <!-- icons for socia websites -->
+        <div class="icon1 wow fadeinLeft">
+            <a href="https://www.facebook.com/adrian.barron.144?fref=ts"><i class="fa fa-facebook-square fa-4x" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/barber_187/"><i class="fa fa-instagram fa-4x" aria-hidden="true"></i></a>
+        </div>
     </section>
     <section id="Services">
         <div class="title3">
@@ -116,12 +133,17 @@
         </div>
 
     </section>
+    <section id="portfolio">
+
+    </section>
 
 
     <!--Script Section   -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https:///cdnjs.cloudflare.com/ajax/libs/wow/0.1.12/wow.min.js"></script>
+
 
     <script>
         // Add scrollspy to <body>
@@ -151,7 +173,15 @@
             } // End if
         });
     </script>
+    <!-- Script for wow.js  -->
     <script>
+        new WOW({
+            boxClass: 'wow', // default
+            animateClass: 'animated', // default
+            offset: 0, // default
+            mobile: true, // default
+            live: true // default
+        }).init();
     </script>
 
 </body>
