@@ -1,6 +1,11 @@
 body {
   position: relative;
 }
+img{
+  height: auto;
+  width: 100%;
+}
+
 
 #home{
   display: flex;

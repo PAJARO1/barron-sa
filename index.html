@@ -4,13 +4,16 @@
     <title>Barron</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1" <link href="assets/css/font-awesome.min.css" rel="stylesheet" media="screen">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+    <!-- Links fro Wow Js function -->
     <link href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="assets/css/font-awesome.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="assets/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="assets/owl-carousel/owl.theme.css">
 
 
 
@@ -133,7 +136,19 @@
         </div>
 
     </section>
+
+    <!-- Owl Carousel Photo gallery   -->
     <section id="portfolio">
+        <div id="owl-example" class="owl-carousel">
+            <div> <img src="https://scontent-dft4-1.xx.fbcdn.net/t31.0-8/14257749_1211370812256404_6602833419598379193_o.jpg" alt=""> </div>
+            <div> <img src="https://scontent-dft4-1.xx.fbcdn.net/t31.0-8/13662167_1170748102985342_3030689630091768093_o.jpg" alt=""> </div>
+            <div> <img src="https://scontent-dft4-1.xx.fbcdn.net/t31.0-8/14305415_1217070135019805_1383269770849820552_o.jpg" alt=""> </div>
+            <div> <img src="https://scontent-dft4-1.xx.fbcdn.net/t31.0-8/13698187_1165975463462606_3598890270961310224_o.jpg" alt=""> </div>
+            <div> Your Content </div>
+            <div> Your Content </div>
+            <div> Your Content </div>
+
+        </div>
 
     </section>
 
@@ -142,8 +157,11 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https:///cdnjs.cloudflare.com/ajax/libs/wow/0.1.12/wow.min.js"></script>
-
+    <!--Scroll spy ^  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/0.1.12/wow.min.js"></script>
+    <!-- Owl Carousel scripts needed to work////// remove the jquery 1.9.1 to stand alone from the folder -->
+    <script src="jquery-1.9.1.min.js"></script>
+    <script src="assets/owl-carousel/owl.carousel.js"></script>
 
     <script>
         // Add scrollspy to <body>
@@ -182,6 +200,13 @@
             mobile: true, // default
             live: true // default
         }).init();
+    </script>
+    <script>
+        $(document).ready(function() {
+
+            $("#owl-example").owlCarousel();
+
+        });
     </script>
 
 </body>
