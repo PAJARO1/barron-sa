@@ -116,6 +116,9 @@ text-align: center;
 }
 #portfolio{
   height: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .appointments{
   font-family: 'Kaushan Script', cursive;
@@ -131,4 +134,53 @@ text-align: center;
 .owl-item img{
     height:300px;
     width:100%;
+}
+.gallery{
+  font-family: 'Kaushan Script', cursive;
+  color: #333;
+  font-weight: bold;
+  font-size: 3em;
+  padding-bottom: 20px;
+}
+
+
+/**
+ * Media Queries
+ **/
+@media screen and (min-width: 320px) {
+  .page::before{
+    content: "320px";
+    color: green;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-weight: 700;
+    margin: 5px;
+    font-size: 2em;
+  }
+}
+@media screen and (min-width: 480px) {
+  .page::before {
+    content: "480px";
+    color: maroon;
+  }
+}
+@media screen and (min-width: 620px) {
+  .page::before {
+    content: "620px";
+    color: orange;
+  }
+}
+@media screen and (min-width: 810px) {
+  .page::before {
+    content: "810px";
+    color: black;
+  }
+
+@media screen and (min-width: 1400px) {
+  .container::before{
+    content: "1400px";
+    color: black;
+  }
+
 }
