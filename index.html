@@ -49,7 +49,10 @@
                         <a href="#Services">Services</a>
                     </li>
                     <li>
-                        <a href="#portfolio">Contact Us</a>
+                        <a href="#portfolio">portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#Testimonials">Testimonials</a>
                     </li>
                 </ul>
             </div>
@@ -167,6 +170,32 @@
         </div>
 
     </section>
+    <section id="testimonials">
+
+        <div class="test">Testimonial</div>
+        <div id="owl-demo" class="owl-carousel owl-theme">
+
+            <div class="item">
+                <img src="https://scontent-atl3-1.xx.fbcdn.net/t31.0-8/13923727_1200388143336975_7787921072534963358_o.jpg" alt="The Last of us">
+                <p>"Best Barbor Shop On The North Side"</p>
+            </div>
+            <div class="item">
+                <img src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/14642495_10202498536142196_3221806533132798981_n.jpg?oh=8ef7bb5280d2ae21c9d6ee58ef90cda7&oe=58942439" alt="">
+                <p>"Now these guys don't need to be voted by any magazines top 15 best barbers in San Antonio, they are THE BARBERS in SAN ANTONIO."</p>
+            </div>
+            <div class="item"><img src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/12800150_1078968872160982_4459041597961352224_n.jpg?oh=09c0423493d43d86532072ab558c0215&oe=5860E31D" alt="">
+                <p>"Clean cuts every time these are the guys to visit if you want a clean cut in san antonio"</p>
+            </div>
+            <div class="item"><img src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/14713711_1495199503829300_3474538332871557324_n.jpg?oh=5de6d90e3cbb1a1b513564cb4e7a2e4f&oe=589AD56D" alt="">
+                <p>"It's not flaunting the fresh cut...it's more flaunting my barbers Adrian Barron great work ethic that he's been blessed with. Helping keep a old ass man looking fresh"</p>
+            </div>
+
+
+        </div>
+        <div class="footer">
+            <div class="legal">Copyright (c) 2016 Copyright Barron's Barber Shop All Rights Reserved.</div>
+        </div>
+    </section>
 
 
     <!--Script Section   -->
@@ -224,7 +253,94 @@
 
         });
     </script>
+    <!--Second owl carousel for testimonials script this has a progress bar that allos it to move automatically-->
+    <script>
+        $(document).ready(function() {
 
+            var time = 5; // time in seconds
+
+            var $progressBar,
+                $bar,
+                $elem,
+                isPause,
+                tick,
+                percentTime;
+
+            //Init the carousel
+            $("#owl-demo").owlCarousel({
+                slideSpeed: 500,
+                paginationSpeed: 500,
+                singleItem: true,
+                afterInit: progressBar,
+                afterMove: moved,
+                startDragging: pauseOnDragging
+            });
+
+            //Init progressBar where elem is $("#owl-demo")
+            function progressBar(elem) {
+                $elem = elem;
+                //build progress bar elements
+                buildProgressBar();
+                //start counting
+                start();
+            }
+
+            //create div#progressBar and div#bar then prepend to $("#owl-demo")
+            function buildProgressBar() {
+                $progressBar = $("<div>", {
+                    id: "progressBar"
+                });
+                $bar = $("<div>", {
+                    id: "bar"
+                });
+                $progressBar.append($bar).prependTo($elem);
+            }
+
+            function start() {
+                //reset timer
+                percentTime = 0;
+                isPause = false;
+                //run interval every 0.01 second
+                tick = setInterval(interval, 10);
+            };
+
+            function interval() {
+                if (isPause === false) {
+                    percentTime += 1 / time;
+                    $bar.css({
+                        width: percentTime + "%"
+                    });
+                    //if percentTime is equal or greater than 100
+                    if (percentTime >= 100) {
+                        //slide to next item
+                        $elem.trigger('owl.next')
+                    }
+                }
+            }
+
+            //pause while dragging
+            function pauseOnDragging() {
+                isPause = true;
+            }
+
+            //moved callback
+            function moved() {
+                //clear interval
+                clearTimeout(tick);
+                //start again
+                start();
+            }
+
+            //uncomment this to make pause on mouseover
+            // $elem.on('mouseover',function(){
+            //   isPause = true;
+            // })
+            // $elem.on('mouseout',function(){
+            //   isPause = false;
+            // })
+
+        });
+    </script>
 </body>
 
 
