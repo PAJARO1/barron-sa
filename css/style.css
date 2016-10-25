@@ -39,6 +39,8 @@ img{
   display: flex;
   flex-direction: column;
   text-align: center;
+  border-bottom: 2px solid #3498db;
+
 }
 
 .box2{
@@ -61,6 +63,12 @@ display: flex;
 flex-direction: column;
 align-items: center;
 text-align: center;
+}
+.box25{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 .title2{
   font-family: 'Kaushan Script', cursive;
@@ -125,11 +133,13 @@ text-align: center;
   color: #c0392b;
   font-size: 3.5em;
   margin-top: 50px;
+
 }
 .price1{
   font-family: 'Kaushan Script', cursive;
   color: #3498db;
   font-size: 2.5em;
+  border-bottom: 2px solid #3498db;
 }
 .owl-item img{
     height:300px;
@@ -152,7 +162,7 @@ text-align: center;
 }
 #owl-demo .item img{
   display: block;
-  width: 100%;
+  width: 300px;
   height: 300px;
   border-radius: 100%;
 }
@@ -205,18 +215,98 @@ text-align: center;
     content: "480px";
     color: maroon;
   }
+  #Barbers{
+  height: 1200px;
+
+  }
 }
 @media screen and (min-width: 620px) {
   .page::before {
     content: "620px";
     color: orange;
   }
+  #home{
+    height: 600px;
+    padding-top: 50px;
+    background-image: url("../img/pole.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  #Contact{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 400px;
+    padding-top: 50px;
+    margin-top: -100px;
+
+  }
+  .image1{
+    height: 250px;
+    width: 250px;
+    margin-top: 20px;
+
+  }
+
+
 }
 @media screen and (min-width: 810px) {
   .page::before {
     content: "810px";
     color: black;
   }
+  #Barbers{
+  height: 900px;
+
+  }
+  .box25{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    width: 1100px;
+
+
+  }
+  .A1{
+    width: 750px;
+    text-align: center;
+  }
+
+  .image1{
+    height: 300px;
+    width: 300px;
+    margin-top: 20px;
+
+  }
+  .icon1{
+    margin-top: -75px;
+  }
+
+#Services{
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: space-around;
+
+}
+.box5{
+  width: 500px;
+}
+.box6{
+  margin-top: -225px;
+}
+#owl-example {
+width: 1000px;
+}
+
+}
+
 
 @media screen and (min-width: 1400px) {
   .container::before{
