@@ -76,8 +76,8 @@ text-align: center;
   font-size: 4em;
 }
 .image1{
-  height: 200px;
-  width: 200px;
+  height: 250px;
+  width: 250px;
   margin-top: 20px;
 
 }
@@ -163,8 +163,8 @@ text-align: center;
 }
 #owl-demo .item img{
   display: block;
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
   border-radius: 100%;
 }
 .item{
