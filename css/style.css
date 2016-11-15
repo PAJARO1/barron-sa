@@ -98,6 +98,9 @@ text-align: center;
 .box4{
   margin-top: 30px;
 }
+.box5{
+  width: auto;
+}
 
 #Services{
   height: 600px;
