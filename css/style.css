@@ -319,7 +319,9 @@ img{
 width: 1000px;
 height: 600px;
 }
-
+#testimonials {
+  margin-top: 25px;
+}
 }
 
 
